@@ -70,7 +70,9 @@ public class RainbowColors {
     }
 
     public RainbowColors (String initialText, int[] initialColor) {
-        this.accumulatedText = initialText;
+        this.accumulatedText = "";
+        beginTextColoring(initialColor);
+        this.accumulatedText += initialText;
     }
 
     @Contract(pure = true)
