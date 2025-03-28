@@ -1,11 +1,11 @@
-package org.rainbowcolors.java;
+package com.egorgoncharov.coloredprinter;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 
-public class RainbowColors {
+public class ColoredPrinter {
     public static final String BLACK = "\033[0;30m";
     public static final String RED = "\033[0;31m";
     public static final String GREEN = "\033[0;32m";
@@ -65,22 +65,22 @@ public class RainbowColors {
 
     public String accumulatedText = "";
 
-    public RainbowColors (String initialText) {
+    public ColoredPrinter(String initialText) {
         this.accumulatedText = initialText;
     }
 
-    public RainbowColors (String initialText, int[] initialColor) {
+    public ColoredPrinter(String initialText, int[] initialColor) {
         this.accumulatedText = "";
         beginTextColoring(initialColor);
         this.accumulatedText += initialText;
     }
 
     @Contract(pure = true)
-    public RainbowColors (@NotNull RainbowColors rc) {
+    public ColoredPrinter(@NotNull ColoredPrinter rc) {
         accumulatedText = rc.accumulatedText;
     }
 
-    public RainbowColors () {}
+    public ColoredPrinter() {}
 
     public void print(String text) {
         System.out.print(text);
