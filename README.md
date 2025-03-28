@@ -1,4 +1,4 @@
-# Rainbow Colors For Java
+# Colored Printer
 ## __Description__
 This small library helps You to print beautiful colored text in console, this library is very easy to use, the manual is provided down below
 ___
